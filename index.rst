@@ -4,28 +4,29 @@
    contain the root `toctree` directive.
 
 Добро пожаловать в документацию DamuCRM!
-===================================
+======================================================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Содержание:
 
 
 
 Indices and tables
-==================
+====================================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
 
 
-Contents
---------
+Содержание
+----------------
 
 .. toctree::
    :maxdepth: 2
    :glob:
 
-   install
-  
+   install   
+   faq/faq
+
