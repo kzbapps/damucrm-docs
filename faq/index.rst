@@ -5,6 +5,8 @@ FAQ
    regexp
    xml
    json
+   angular_detail
+   angular_query
 
 
 
