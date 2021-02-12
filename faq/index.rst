@@ -21,7 +21,9 @@ FAQ
    angularjs_update
    angularjs_draganddrop
    lua_delbom
-
+   file_thumb
+   
+	
    
    
    
