@@ -51,3 +51,13 @@
  но есть основной detail.id
  
  
+Пример ограничения по полю без param1 и без ?
+
+.. code-block:: javascript
+
+	entity_ui_blocks_select&flt$entity_id$eq={{detail.entity_id || detail.id}}
+
+Здесь поиск производится по полю main.entity_id
+
+eq означает =
+
