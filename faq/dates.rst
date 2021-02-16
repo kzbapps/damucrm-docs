@@ -11,6 +11,8 @@
 .. code-block:: javascript
 
 	$scope.detail.doc_at = moment().format("YYYY-MM-DD H:mm:ss");
+	$scope.date1 = moment().format("YYYY-MM-DD");
+	$scope.date2 = moment().add(1,'days').format("YYYY-MM-DD");
 	
 Преобразование в MySQL
 

@@ -25,3 +25,5 @@ FAQ
    sub_json_lua
    restservices_redirect
    ui_select_limit_param   
+   email
+   
