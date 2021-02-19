@@ -28,4 +28,5 @@ FAQ
    ui_select_limit_param   
    email
    restore
+   page_as_view
    
