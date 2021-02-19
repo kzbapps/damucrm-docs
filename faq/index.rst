@@ -8,6 +8,7 @@ FAQ
    angular_detail
    angular_query
    angular_params
+   angular_start_bp
    bpm_lua_progress
    angularjs_modal
    angularjs_modal_show

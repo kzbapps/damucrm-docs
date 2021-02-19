@@ -23,6 +23,12 @@
 	SELECT DATE_FORMAT(now(), '%d.%m.%Y %H:%i:%S');
 	>10.02.1985 02:00:00
 	
+Преобразование в PostgreSQL
+
+.. code-block:: sql
+
+	 select to_char(now(), 'dd.mm.YYYY HH24:MM:SS') 
+	>19.02.2021 13:02:06
 
 Преобразование в AngularJS
 
