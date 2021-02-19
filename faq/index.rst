@@ -27,4 +27,5 @@ FAQ
    restservices_redirect
    ui_select_limit_param   
    email
+   restore
    
