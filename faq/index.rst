@@ -29,4 +29,6 @@ FAQ
    email
    restore
    page_as_view
+   approve
+   
    
