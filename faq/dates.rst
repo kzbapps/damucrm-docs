@@ -27,8 +27,14 @@
 
 .. code-block:: sql
 
-	 select to_char(now(), 'dd.mm.YYYY HH24:MM:SS') 
+	 select to_char(now(), 'dd.MM.YYYY HH24:MI:SS') 
 	>19.02.2021 13:02:06
+	
+	 select to_char(now(), 'YYYY-MM-dd HH24:MI:SS') 
+	>2021-03-06 13:12:36	
+	
+	 select TO_DATE('2021-03-06 00:00:00','YYYY-MM-dd HH24:MI:SS') 
+	>2021-03-06	
 
 Преобразование в AngularJS
 
