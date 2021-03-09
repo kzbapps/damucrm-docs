@@ -30,5 +30,6 @@ FAQ
    restore
    page_as_view
    approve
+   backups
    
    
