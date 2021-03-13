@@ -9,7 +9,7 @@
 	#!/bin/bash
 	echo "Архивируем дамп"
 
-	myvar=$(mysql -u root damucrm -e "select group_concat(code separator ' ') users from entities where code  not in ('users','table_log_dtls','error_logs','bp_instances','imp_task_rows') and code in (select table_name from information_schema.tables)")
+	myvar=$(mysql -u root damucrm -e "select group_concat(code separator ' ') users from entities where code  not in ('users','table_log_dtls','error_logs','bp_instances','imp_task_rows') and code in (select table_name from information_schema.tables where table_schema=database())")
 
 
 	if [ $? -eq 0 ]
