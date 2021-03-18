@@ -33,5 +33,6 @@ FAQ
    backups
    constraints
    sso
+   breadcrumbs
 
    
