@@ -35,7 +35,7 @@ RateLimiter - Ограничение частоты вызова по интер
 	output.errText,output.errNum = RateLimiter("TEST",ip,"5s",3)
 
 
-Пример для Rest Services ограничить по пользователю адресу до максимум 3 запуска в 5 секунд
+Пример для Rest Services ограничить по пользователю до максимум 3 запуска в 5 секунд
 
 .. code-block:: lua
 
