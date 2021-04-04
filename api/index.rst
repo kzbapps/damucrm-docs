@@ -4,6 +4,7 @@
 .. toctree::
 	RateLimiter
 	RunParallel
+	GetPasswordHash
 
 
    
