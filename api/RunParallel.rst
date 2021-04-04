@@ -7,7 +7,9 @@ Run Parallel
      
 	 0..N-1 - THREAD_CURRENT , --Доступный текущий поток
 	 
+	
 	 THREAD_TOTAL-COUNT - N, --Количество потоков
+	 
 	 
 	 THREAD_KEY, --Ключ потока
 
@@ -30,7 +32,7 @@ Run Parallel
 	    
 		[
             
-			[
+			 [
 		       s = "THREAD_PREFIX:"
 		      (THREAD_PREFIX or "")
 			  s=s
@@ -45,7 +47,7 @@ Run Parallel
 			  s=s
 		      print("Parallel test from thread ", s)
             
-			]
+			 ]
         
 		]
        
