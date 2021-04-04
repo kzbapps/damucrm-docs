@@ -48,11 +48,9 @@ Run Parallel
 			  "THREAD_CURRENT:"
 			  (THREAD_CURRENT or "")
 			  s=s
-		     
+		      print("Parallel test from thread ", s)
 			
-            
-			]
-         print("Parallel test from thread ", s)
+            ]
 		]
        
 	   )
