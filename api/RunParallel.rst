@@ -32,7 +32,7 @@ Run Parallel
 	    
 		[
             
-			 [
+			[
 		       s = "THREAD_PREFIX:"
 		      (THREAD_PREFIX or "")
 			  s=s
@@ -47,7 +47,7 @@ Run Parallel
 			  s=s
 		      print("Parallel test from thread ", s)
             
-			 ]
+			]
         
 		]
        
