@@ -33,19 +33,23 @@ Run Parallel
 		[
             
 			[
-		         s = "THREAD_PREFIX:"
-		         (THREAD_PREFIX or "")
+		          s = "THREAD_PREFIX:"
+		          (THREAD_PREFIX or "")
 			  s=s
+			  
 			  "THREAD KEY:"
 			  (THREAD_KEY or "")
 			  s=s
+			  
 			  "THREAD_TOTAL-COUNT:"
 			  (THREAD_TOTAL-COUNT or "")
 			  s=s
+			  
 			  "THREAD_CURRENT:"
 			  (THREAD_CURRENT or "")
 			  s=s
-		      print("Parallel test from thread ", s)
+		     
+			 print("Parallel test from thread ", s)
             
 			]
         
