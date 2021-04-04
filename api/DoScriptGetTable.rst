@@ -7,6 +7,7 @@
  
         output.errNum , --Номер ошибки
 
+
 .. code-block:: lua 
        
         output = {}
