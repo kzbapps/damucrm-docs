@@ -6,7 +6,9 @@ Run Parallel
 .. code-block:: lua                 
      
 	 0..N-1 - THREAD_CURRENT , --Доступный текущий поток
+	 
 	 THREAD_TOTAL-COUNT - N, --Количество потоков
+	 
 	 THREAD_KEY, --Ключ потока
 
 При запуске дважды с одними параметрами , запуск уже запущенного потока не будет воспроизведен , т.е. в один момент времени может работать  1 ключ/1 поток.
@@ -14,16 +16,21 @@ Run Parallel
 .. code-block:: lua
       
 	  RunParallel(
-	     "qwe" , --Ключ поток
-	     5, --Количество потоков
-        )
+	     
+		 "qwe" , --Ключ поток
+	     
+		 5, --Количество потоков
+        
+		)
 
 
 ..  code-block:: lua
       
 	  RunParallel(
-	    [
-            [
+	    
+		[
+            
+			[
 		       s = "THREAD_PREFIX:"
 		      (THREAD_PREFIX or "")
 			  s=s
@@ -37,9 +44,12 @@ Run Parallel
 			  (THREAD_CURRENT or "")
 			  s=s
 		      print("Parallel test from thread ", s)
-            ]
-        ]
-      )
+            
+			]
+        
+		]
+       
+	   )
 
 		
 		
