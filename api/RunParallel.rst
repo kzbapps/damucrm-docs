@@ -4,7 +4,8 @@ Run Parallel
 Процедура вызывает lua скрипт в N потоках . Обеспечивает работу высоконагруженных систем.
 
 .. code-block::lua                 
-    0..N-1 - THREAD_CURRENT , --Доступный текущий поток
+    
+	0..N-1 - THREAD_CURRENT , --Доступный текущий поток
 	THREAD_TOTAL-COUNT - N, --Количество потоков
 	THREAD_KEY, --Ключ потока
 
@@ -12,14 +13,16 @@ Run Parallel
 	
  
 .. code-block::lua
-      RunParallel(
+      
+	  RunParallel(
 	    "qwe" , --Ключ потока
 		5, --Количество потоков
         )
 
 
 ..  code-block::lua
-     RunParallel(
+     
+	 RunParallel(
 	    [
             [
 		       s = "THREAD_PREFIX:"
