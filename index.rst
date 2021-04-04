@@ -29,6 +29,7 @@
    install/index
    faq/index
    api/index
+   features/index
 
 О платформе
 ====================================
