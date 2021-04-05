@@ -23,13 +23,13 @@
   
      errNum  = Detail(
  
-         var.pk ,
+                      var.pk ,
  
-         "account" ,
+                      "account" ,
  
-         sys.user_id
+                      sys.user_id
  
-         )
+                     )
  
       for key ,
  
