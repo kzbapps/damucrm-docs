@@ -16,5 +16,7 @@
         PDFBatch
         SqlQueryRows
         Command
+        CompareHashAndPassword
+        CSVRead
 
    
