@@ -15,20 +15,22 @@
  
   --Пример
 
-  errText , errNum = SendEmail ( 
- 
-        "zvanda" ,  --Code of distribution channel 
+  errText ,
 
-        "Ельдар Саумбаев" , --To text 
+  errNum = SendEmail ( 
  
-        "yeldar@bk.ru" , --To Mail 
+                      "zvanda" ,  --Code of distribution channel 
+
+                      "Ельдар Саумбаев" , --To text 
  
-        "Изменен пароль в CallBack" , --Subject 
+                      "yeldar@bk.ru" , --To Mail 
+ 
+                      "Изменен пароль в CallBack" , --Subject 
 
-        "HTML test! Регистрация в callback" , --Body 
+                      "HTML test! Регистрация в callback" , --Body 
 
-        true  --Wait
+                      true  --Wait
         
-        )
+                     )
 
         
