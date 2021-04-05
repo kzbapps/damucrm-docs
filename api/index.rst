@@ -7,6 +7,7 @@
 	BPMSStartProcess2
         DoScriptGetTable
         SendWSAsync
+        ClearCache
 
 
    
