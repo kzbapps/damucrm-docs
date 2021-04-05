@@ -3,7 +3,7 @@ File content
 
 Параметры
 
-..code-block:: lua
+.. code-block:: lua
 
        filename ,             --Название файла
 

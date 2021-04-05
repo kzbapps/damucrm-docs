@@ -33,7 +33,13 @@ CSV read
 
         if errNum ~= 0 then 
 
-                 var.last_error = errText return  end values ,
+                 var.last_error = errText 
+                   
+                            return  
+
+                            end 
+ 
+                 values ,
 
                  errText , 
 
@@ -41,13 +47,21 @@ CSV read
 
                          if errNum ~= 0 then 
  
-                                 var.last_error = errText return end map = {} 
+                                 var.last_error = errText 
+
+                                          return 
+
+                                          end 
+                           
+                                 map = {} for k , v in pairs (values ) do 
  
-                                 for k , v in pairs (values ) do 
- 
-                                 if k == 1 then 
+                                      if k == 1 then 
   
-                                         for k1 , v1  in pairs (v) do map [v1] = k1 end 
+                                         for k1 , v1  in pairs (v) do 
+  
+                                                  map [v1] = k1
+  
+                                                  end 
 
                                          else a = 1 
                     
