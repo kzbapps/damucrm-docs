@@ -27,3 +27,5 @@
         Hostname
         TimeParseFormat
         HttpGet2
+        ColumnsByQuery
+        RegexpFindStringSubmatch
