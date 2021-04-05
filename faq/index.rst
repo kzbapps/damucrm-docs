@@ -34,5 +34,6 @@ FAQ
    constraints
    sso
    breadcrumbs
+   1s_zup_get_status
 
    
