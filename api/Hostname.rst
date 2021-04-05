@@ -12,6 +12,8 @@ Hostname
         
 .. code-block:: lua 
 
+       --Пример
+
         output = {} output.hostname ,
   
         output.error_text ,
