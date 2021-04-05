@@ -24,3 +24,6 @@
         DMLI  
         SqlCall 
         AppendFile
+        Hostname
+        TimeParseFormat
+        HttpGet2
