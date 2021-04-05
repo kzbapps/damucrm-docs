@@ -33,74 +33,74 @@
 
        output.errNum = PDFBatch ( 
 
-              [ [ h:\project\pdft-master\test\pdf\pdf_from_docx.pdf ] ]  ,
+                                 [ [ h:\project\pdft-master\test\pdf\pdf_from_docx.pdf ] ]  ,
 
-              (
+                                      (
                
-                {
+                                          {
 
-                   { action = "AddFont" , 
+                                              { action = "AddFont" , 
 
-                     param1 = " arial" ,
+                                                param1 = " arial" ,
 
-                     param2 = [ [ h:\project\pdft-master\test\ttf\arial.ttf ] ] 
+                                                param2 = [ [ h:\project\pdft-master\test\ttf\arial.ttf ] ] 
  
-                   } , 
+                                              } , 
               
-                   { action = "SetFont" ,
+                                              { action = "SetFont" ,
 
-                     param1  = "Arial" , 
+                                                param1  = "Arial" , 
+   
+                                                param2 = " " , 
+
+                                                param3 = 14 
  
-                     param2 = " " , 
+                                              },
 
-                     param3 = 14 
- 
-                   },
+                                              { action = "Insert",
 
-                   { action = "Insert",
+                                                param1 = "Привет!!!"
 
-                     param1 = "Привет!!!"
+                                                param2 = 1 ,
 
-                     param2 = 1 ,
-
-                     param3 = 40 ,
+                                                param3 = 40 ,
   
-                     param4 = 10 ,
+                                                param4 = 10 ,
 
-                     param5 = 100 ,
+                                                param5 = 100 ,
 
-                     param6 = 100 , 
+                                                param6 = 100 , 
 
-                     param7 = Right + Center 
+                                                param7 = Right + Center 
            
-                   },
+                                              },
 
-                   { action = "InsertImg" , 
+                                              { action = "InsertImg" , 
 
-                     param1 = [ [ h:\projects\pdft-master\test\img\gopher.png ] ] ,
+                                                param1 = [ [ h:\projects\pdft-master\test\img\gopher.png ] ] ,
 
-                     param2 = 1 ,
+                                                param2 = 1 ,
 
-                     param3 = 400 , 
+                                                param3 = 400 , 
  
-                     param4 = 100 , 
+                                                param4 = 100 , 
 
-                     param5 = 200 , 
+                                                param5 = 200 , 
 
-                     param6 = 200
+                                                param6 = 200
  
-                   } ,
+                                              } ,
 
-                   { acion = "Save" , 
+                                              { acion = "Save" , 
  
-                     param1 = "c:\\temp\\222.pdf" 
+                                                param1 = "c:\\temp\\222.pdf" 
                    
-                   },
+                                              },
 
-              }  
+                                       }  
 
-          )
+                             )
   
-     )
+               )
                                 
      

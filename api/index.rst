@@ -10,8 +10,11 @@
         ClearCache
         AccUndoaByPkNoOper
         Detail
+        GetPasswordHash
+        SqlQueryRow
         SendEmail
         PDFBatch
-
+        SqlQueryRows
+        Command
 
    
