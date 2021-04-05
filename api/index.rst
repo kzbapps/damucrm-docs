@@ -11,6 +11,7 @@
         AccUndoaByPkNoOper
         Detail
         SendEmail
+        PDFBatch
 
 
    
