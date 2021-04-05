@@ -12,6 +12,7 @@
         Detail
         GetPasswordHash
         SqlQueryRow
+        SqlQueryRow2
         SendEmail
         PDFBatch
         SqlQueryRows
