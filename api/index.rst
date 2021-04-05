@@ -9,6 +9,7 @@
         SendWSAsync
         ClearCache
         AccUndoaByPkNoOper
+        Detail
 
 
    
