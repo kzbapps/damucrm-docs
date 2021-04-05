@@ -29,3 +29,5 @@
         HttpGet2
         ColumnsByQuery
         RegexpFindStringSubmatch
+        ImapProcessInBoxToMessage
+        CheckGrantOfEntity
