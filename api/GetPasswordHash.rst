@@ -3,7 +3,7 @@
 
 .. code_block:: lua
 
- --Пример кода 
+   --Пример кода 
 
     result = GetPasswordHash ( 
  
