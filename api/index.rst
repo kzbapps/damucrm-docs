@@ -8,6 +8,7 @@
         DoScriptGetTable
         SendWSAsync
         ClearCache
+        AccUndoaByPkNoOper
 
 
    
