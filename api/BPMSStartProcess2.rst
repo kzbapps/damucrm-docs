@@ -24,11 +24,16 @@
      output.errText ,  
      
      output.errNum = BPMSStartProcess2 ( 
-             "test_new" ,
-             1,
-             inputVars,
-             sys.instance_id
-             )
+             
+                                       "test_new" ,
+                                      
+                                       1,
+                          
+                                       inputVars,
+              
+                                       sys.instance_id
+             
+                                       )
 
 .. code-block:: lua
      
@@ -38,18 +43,31 @@
                       {
                        
                         "output": {
+                                 
                                   "errNum": 0, 
+                                 
                                   "errText": "" ,
+                                 
                                   "instanceId": 5669,
+                                 
                                   "output" : {
-                                                "var2": "test4444477777"
-                                              } ,
+                                                
+                                             "var2": "test4444477777"
+                                              
+                                             } ,
+                                  
                                   "taskId": "XXX-XXX" 
-                                  },
+                                 
+                                   },
+                       
                        "resultText": "Service OK",
+                       
                        "resultCode": "0",
+                       
                        "hasError": false 
+                       
                        }
-                  ]
+                  
+                   ]
               ]
                                  
