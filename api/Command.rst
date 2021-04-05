@@ -3,11 +3,11 @@
 
 Параметры
 
-.. code_block:: lua 
+.. code-block:: lua 
 
-               errCode ,       --Код ошибки 
+       errCode ,       --Код ошибки 
 
-.. code_block:: lua 
+.. code-block:: lua 
 
       --Пример
 
