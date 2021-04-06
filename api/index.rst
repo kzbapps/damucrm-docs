@@ -31,3 +31,7 @@
         RegexpFindStringSubmatch
         ImapProcessInBoxToMessage
         CheckGrantOfEntity
+        SqlQueryRowsExtDb
+        UploadRawData
+        Query
+        StringToJson
