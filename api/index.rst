@@ -35,3 +35,4 @@
         UploadRawData
         Query
         StringToJson
+        ParseTemplate
