@@ -1,14 +1,6 @@
 Hostname
 =========================
 
-Параметры
-
-.. code-block:: lua 
-
-        errText ,           --Текст ошибки 
-
-        errNum ,            --Номер ошибки 
-
         
 .. code-block:: lua 
 

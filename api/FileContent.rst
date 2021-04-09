@@ -1,17 +1,6 @@
 File content
 ==================================
 
-Параметры
-
-.. code-block:: lua
-
-       filename ,             --Название файла
-
-       contentType ,          --Тип контента
-
-       errText ,              --Текст ошибки
-
-       errNum ,               -- Номер ошибки
 
 .. code-block:: lua
 

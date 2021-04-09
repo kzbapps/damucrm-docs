@@ -1,13 +1,6 @@
 Http Get 2
 =================================
 
-Параметры
-
-.. code-block:: lua 
-
-          errText ,               --Текст ошибки 
-
-          errNum ,                --Номер ошибки 
 
 .. code-block:: lua
 

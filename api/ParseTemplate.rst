@@ -1,21 +1,15 @@
 Parse template - обрабатывание шаблона
 ==========================================================================
 
-Параметры
 
-.. code-block:: lua
-
-   errText ,              --Текст ошибки
-
-   errNum  ,              --Номер ошибки
-
-   {} ,            --Проведение документа
 
 .. code-block:: lua 
 
    --Пример
 
-   test = {} test.text = "test123"
+   test = {} 
+ 
+   test.text = "test123"
 
    output = {} output.res , 
 
