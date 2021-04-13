@@ -17,7 +17,6 @@
 	select 2636,concat('2021-04-13-',i.iin), i.id$, 1, uuid_v4() from `i$ksk_citizen_register_v1` i
 	join bp_instances i2 on i2.id=i.id$
 	where i.iin in ( select code from ksk_citizen_reg_check where code not in (select coalesce(login,'') from users) 
-	and code<>'850618302518'
 	) 
 	and last_error='Код введен неверно' and i2.finish_point_id =2633;
 	
