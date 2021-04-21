@@ -36,6 +36,4 @@ FAQ
    breadcrumbs
    1s_zup_get_status
    restore_manual_processes.rst
-   
-
-   
+   params_for_page_angularjs   
