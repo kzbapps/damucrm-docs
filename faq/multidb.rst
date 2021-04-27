@@ -20,4 +20,8 @@ decode, nvl
 
 	case when coalesce(ip_fl,'0')='1' then 'ИСТИНА' when coalesce(ip_fl,'0')='0' then 'ЛОЖЬ' else 'НЕКОРРЕКТНО' end
 	
+конкатенация
+
+.. code-block:: text
 	
+{{if .Oracle}}main.code || ' - ' || main.title{{else}}concat(main.code, ' - ',main.title){{end}}	
