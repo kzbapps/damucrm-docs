@@ -24,4 +24,4 @@ decode, nvl
 
 .. code-block:: text
 	
-{{if .Oracle}}main.code || ' - ' || main.title{{else}}concat(main.code, ' - ',main.title){{end}}	
+	{{if .Oracle}}main.code || ' - ' || main.title{{else}}concat(main.code, ' - ',main.title){{end}}	
