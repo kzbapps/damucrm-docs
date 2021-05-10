@@ -39,3 +39,4 @@ FAQ
    params_for_page_angularjs   
    sql_for_widget_angularjs
    multidb
+   smart_search
