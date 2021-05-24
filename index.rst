@@ -30,6 +30,7 @@
    faq/index
    api/index
    features/index
+   marketplace/index
 
 О платформе
 ====================================
