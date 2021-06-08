@@ -15,6 +15,7 @@
    modules
    data-types
    cicd
+   crontab
    dirs
    files
    file-types
