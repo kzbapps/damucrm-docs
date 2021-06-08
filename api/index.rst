@@ -60,5 +60,8 @@
 	RegexpFindAllStringsAndJoin
 	Base64Encode
 	ParseEmailAddress
-	Split	
+	Split
+	Plugin
+
+	
 	
