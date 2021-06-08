@@ -1,4 +1,4 @@
-Regexp find string submatch - поиск подстроки.
+RegexpFindStringSubmatch - поиск подстроки.
 ==============================================================================
 
 .. code-block:: lua 

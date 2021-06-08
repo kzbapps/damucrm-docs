@@ -1,6 +1,5 @@
-File content
-==================================
-
+FileContent Получить содержимое файла
+====================================================================
 
 .. code-block:: lua
 
@@ -23,25 +22,19 @@ File content
                                       1 
 
                                     )
+
+.. code-block:: json
   
-       [ 
- 
-             [ result {
- 
-                        "contentType" : "image/png" , 
+	{
 
-                        "data" : "PNG\r\n\u001a\n\u000\u0000\u0000..." , 
+		"contentType" : "image/png" , 
 
-                        "errNum" : 0 ,
+		"data" : "PNG\r\n\u001a\n\u000\u0000\u0000..." , 
 
-                        "errText" : " " , 
- 
-                        "filename" : " Для рабочего стола.png"
+		"errNum" : 0 ,
 
-                       }
- 
-              ]
-       
-        ]
-            
+		"errText" : " " , 
 
+		"filename" : " Для рабочего стола.png"
+
+	}

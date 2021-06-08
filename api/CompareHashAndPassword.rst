@@ -1,4 +1,4 @@
-Compare hash  and  password
+CompareHashAndPassword - Compare hash  and  password
 ===========================================================================================
 
 .. code-block:: lua
