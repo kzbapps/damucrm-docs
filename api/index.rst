@@ -38,3 +38,27 @@
 	StringToJson
 	ParseTemplate
 	LdapSearch
+	QueryEscape
+	QueryUnescape
+	HasSuffix
+	HasPrefix
+	StrContains
+	CryptoSignPKCS1v15
+	DBCurrentDateTime
+	XmltoJSONString
+	StripTags
+	Md5
+	StrReplace
+	ParseHTMLTemplate
+	SendMail2NoTLS
+	SendMail2
+	Join
+	JsonToString
+	JsonToStringIndent
+	JsonToXML
+	MkdirAll
+	RegexpFindAllStringsAndJoin
+	Base64Encode
+	ParseEmailAddress
+	Split	
+	
