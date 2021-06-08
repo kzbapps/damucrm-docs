@@ -11,15 +11,11 @@ plugin1.go
 
 	import "fmt"
 
-	var IN map[string]interface{}
-	var OUT = make(map[string]interface{})
-
-	func FUNC_TEST() {
-
-	OUT["text"] = fmt.Sprintf("Hello from Plugin %s",IN["text"])
-	OUT["nds_amount"] = 12 * IN["price"].(float64)
+	func FUNC_TEST(in map[string]interface{}, out *map[string]interface{} ) {
+		*out = make(map[string]interface{})
+		(*out)["text"] = fmt.Sprintf("Hello from Plugin %s",in["text"])
+		(*out)["nds_amount"] = 12 * in["price"].(float64)
 	}
-
 
 Скомпилируем его:
 
@@ -32,8 +28,20 @@ plugin1.go
 .. code-block:: lua
 
 	output = {}
-	output.res,output.errText,output.errNum = Plugin("/opt/go/src/gitlab.com/com.ibcb/plugins/plugin1.so", "FUNC_TEST", { text = "123", price = 1000 })
+	output.res,output.errText,output.errNum = Plugin("/opt/go/src/gitlab.com/com.ibcb/plugins/plugin1.so", "FUNC_TEST", { text = "123", price = 2000 })
 
+Результат 
+
+.. code-block:: json
+
+	{
+		"errNum": 0,
+		"errText": "",
+		"res": {
+			"nds_amount": 24000,
+			"text": "Hello from Plugin 123"
+		}
+	}
 
 При изменении плагина необходимо перезагрузить приклад
 
