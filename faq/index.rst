@@ -40,3 +40,4 @@ FAQ
    sql_for_widget_angularjs
    multidb
    smart_search
+   eds

@@ -31,6 +31,7 @@
    api/index
    features/index
    marketplace/index
+   k2/index
 
 О платформе
 ====================================
