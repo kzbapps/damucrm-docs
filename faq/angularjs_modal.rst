@@ -42,3 +42,14 @@ CallBack:
 	$scope.parentCallBack = function(parent,user){
 	  parent.closeWithParams(parent.modals[parent.current],user);          
 	}
+
+Получение основной детальной информации из модальной страницы
+.. code-block:: javascript
+
+	if ($scope.$parent.modals[$scope.$parent.current].detail
+	&&
+	$scope.$parent.modals[$scope.$parent.current].detail.cat_id$code == "warning_do_3"
+	)
+	{
+		uri = "query/get?code=etg_staff_warning_by_code_title&perpage=100&page=1&param1="+$scope.searchTitle+"&param2="+$scope.searchTitle;
+	}
