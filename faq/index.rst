@@ -2,6 +2,8 @@ FAQ
 ============
 
 .. toctree::
+   :maxdepth: 1
+   
    regexp
    xml
    json
@@ -41,3 +43,5 @@ FAQ
    multidb
    smart_search
    eds
+   its_restapi
+   
