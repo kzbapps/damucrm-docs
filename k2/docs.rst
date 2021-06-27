@@ -130,6 +130,22 @@ ____________________________________
 
 Формирует PDF вариант исходящего требования
 
+**k2loan_compress_dbz - Сжатие дбз файлов**
+
+Скриншот схемы BPMN 2.0 k2loan_compress_dbz - Сжатие дбз файлов
+
+Сжатие происходит по следующему алгоритму:
+
+.. code-block:: lua
+
+	errText,errNum = Command("gs","-sDEVICE=pdfwrite", "-dCompatibilityLevel=1.5", "-dPDFSETTINGS=/screen", "-dNOPAUSE", "-dQUIET", "-dBATCH", "-sOutputFile="..pdfTmpFile, renamedfile)
+
+
+Сжимает PDF файл.
+
+
+
+
 Список исключений
 ----------------------
 
@@ -146,7 +162,6 @@ ______________________________
 Бизнес-процессы по "Список исключений"
 
 **k2loan_exclude_on - Включить**
-____________________________________
 
 Скриншот схемы BPMN 2.0 k2loan_exclude_on - Включить
 
@@ -158,7 +173,6 @@ ____________________________________
 
 
 **k2loan_exclude_off - Выключить**
-____________________________________
 
 Скриншот схемы BPMN 2.0 k2loan_exclude_off - Выключить
 
@@ -818,6 +832,146 @@ ________________________________________________________________________
 Запрос о наличии счетов
 --------------------------
 
+Описание документа
+______________________________
+
+**Запрос о наличии счетов** - Электронные запросы или запросы на бумажных носителях о наличии счетов по клиентам.
+
+Скриншот экранной формы Запрос о наличии счетов
+
+.. image:: img/extaccreq.png
+  :width: 100%
+  :alt: Запрос о наличии счетов
+  
+**Банк** - банк, в который отправляется запрос о наличии счетов клиентов
+
+**Абонент** - заполняется для отправки по электронным каналам
+
+**Ответ по RZAP (PC6)** - ответ, полученный по запросу о наличии счетов
+
+В табличной части **Клиенты** указываюся клиенты, по которым формируется запрос о наличии счетов
+
+Бизнес-процессы
+_______________________________
+
+**k2extaccreq_rzap -  Сформировать RZAP-файл**
+
+Скриншот схемы BPMN 2.0 k2extaccreq_rzap - Сформировать RZAP-файл
+
+.. image:: svg/k2extaccreq_rzap.svg
+  :width: 100%
+  :alt: Сформировать RZAP-файл
+  
+Формирует MT следующего формата:
+
+.. code-block:: lua
+
+	template_bvu = "{4:\r\n"..
+	":20:{{.code}}\r\n"..
+	":12:400\r\n"..
+	":77E:FORMS/RZAP/{{.dtdt}}/Реестр к запросу\r\n"..
+	"/SENDER/{{.own_bank_code}}\r\n"..
+	"/BANK/{{.bank_code}}\r\n"..
+	"{{ range $key, $value := .dbz }}//07/{{$value.cli_title}}/{{$value.cli_iin}}/{{$value.loan_code}}/{{$value.loan_doc_at_fmt}}\r\n{{end}}"..
+	"/TOTAL/{{.dbz_total}}\r\n"..
+	"-}"
+  
+
+**k2extaccreqdtl_send_dbz - Отправляет Скан ДБЗ в БВУ**
+
+Скриншот схемы BPMN 2.0 k2extaccreqdtl_send_dbz - Отправляет Скан ДБЗ в БВУ
+
+.. image:: svg/k2extaccreqdtl_send_dbz.svg
+  :width: 100%
+  :alt: Отправляет Скан ДБЗ в БВУ
+  
+Отправка происходит по процессу, который указан в соответствующем Банке.
+
+Например, формат отправки в один из БВУ:
+
+.. code-block:: lua
+
+	local body =[[<soapenv:Body Id="]]..request_uuid..[[">
+		  <alf:PtpDbzSendIncomingRequest>
+			 <alf:bik>]].. HTMLEscapeString(info.bank_code)..[[</alf:bik>
+			 <alf:fileName>]]..HTMLEscapeString(filename)..[[</alf:fileName>
+			 <alf:base64Data>]]..Base64Encode(content)..[[</alf:base64Data>
+			 <alf:iin>]].. HTMLEscapeString(info.ext_cli_iin)..[[</alf:iin>
+			 <alf:agrementNumber>]].. HTMLEscapeString(info.dbz_num)..[[</alf:agrementNumber>
+			 <alf:agrementDate>]].. HTMLEscapeString(info.doc_at)..[[</alf:agrementDate>
+			 <alf:referenceId>]].. HTMLEscapeString(info.code)..[[</alf:referenceId>
+			 <alf:bankCode>]].. HTMLEscapeString(info.abonent_dbz_code)..[[</alf:bankCode>
+			 <alf:nameClient>]].. HTMLEscapeString(info.title)..[[</alf:nameClient>
+		  </alf:PtpDbzSendIncomingRequest>
+	   </soapenv:Body>]]
+	   
+	local header = array( { ["Content-type"] = "text/xml;charset=UTF-8", ["SoapAction"] = "http://ala.bapps000.kz/Ptp_Dbz_Common_Send_Ws/IPtp_Dbz_Common_Send_Ws2/ptpDbzSendRequest"  } )
+
+	local data = [[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:alf="https://bapps000.kz">
+	   <soapenv:Header/>
+	]]
+	..body..
+	[[</soapenv:Envelope>]]
+	   
+При отправке накладывается ЭЦП.  
+
+**k2extaccreqdtl_send - Отправить MT**
+
+Формирует MT следующего формата:
+
+.. code-block:: lua
+
+	template_bvu = "{4:\r\n"..
+	":20:{{.code}}\r\n"..
+	":12:400\r\n"..
+	":77E:FORMS/EAR/{{.dtdt}}/{{.id}}/Запрос о наличии счетов\r\n"..
+	"/BANK/{{.bik}}\r\n"..
+	"/TOIDN/{{.bank_bin}}/{{.bank_title}}\r\n"..
+	"/PLAT/{{.iin}}/{{.title}}\r\n"..
+	"/DATE/{{.sysdt}}\r\n"..
+	"-}"
+
+
+Связанные процессы
+_______________________________
+
+**k2loan_extreq  - Выставить исходящее ПТ** - формирует запрос о наличии счетов
+
+**k2inforeq_do_pc6 - Ответ на реестр к запросу**
+
+**k2inforeq_do_eac - Обработка ответа на запрос о наличии счета**
+
 Счета в другом банке
 --------------------------
 
+Описание документа
+___________________________
+
+Скриншот экранной формы Счета в другом банке
+
+.. image:: img/extacc.png
+  :width: 100%
+  :alt: Счета в другом банке
+  
+**Номер счета** - IBAN счета в другом банке
+
+**Банк** - банк, в котором открыт счет
+
+**Клиент** - клиент, которому принадлежит счет
+
+**Валюта** - валюта счета
+
+**Запрос** - запрос о наличии счета
+
+**Закрыт** - Признак, если счет закрыт
+  
+Связанные процессы
+_______________________________
+
+**k2inforeq_do_eac - Обработка ответа на запрос о наличии счета**
+
+**k2loan_extreq  - Выставить исходящее ПТ** - формирует запрос о наличии счетов
+
+  
+  
