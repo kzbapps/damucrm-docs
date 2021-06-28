@@ -13,7 +13,7 @@ _______________________________________________________________
 
 .. code-block:: text
 
-POST http://{$k2host}/restapi/services/k2loan_from_eko
+POST https://{$k2host}/restapi/services/k2loan_from_eko
 
 
 .. code-block:: json
@@ -58,7 +58,7 @@ POST http://{$k2host}/restapi/services/k2loan_from_eko
 Сервис приема статусов входящего платежного требования
 _______________________________________________________________
 
-POST http://{$k2host}/restapi/services/k2req_status_from_eko
+POST https://{$k2host}/restapi/services/k2req_status_from_eko
 
 .. code-block:: json
 
@@ -106,7 +106,7 @@ _______________________________________________________________
 
 Запрос:
 
-POST http://{$k2host}/restapi/services/k2req_refuse_from_eko
+POST https://{$k2host}/restapi/services/k2req_refuse_from_eko
 
 
 .. code-block:: json
@@ -138,7 +138,7 @@ reason_code - причина возврата. смотрите с раздел�
 _______________________________________________________________
 
 
-GET http://{$abs_get_cli_url}?iinbin=000000000000
+GET https://{$abs_get_cli_url}?iinbin=000000000000
 
 .. list-table:: Описание полей
    :header-rows: 1
@@ -167,7 +167,7 @@ GET http://{$abs_get_cli_url}?iinbin=000000000000
 _______________________________________________________________
 
 
-GET http://{$abs_get_acc_url}?iinbin=000000000000
+GET https://{$abs_get_acc_url}?iinbin=000000000000
 
 .. list-table:: Статусы
    :header-rows: 1
@@ -220,7 +220,7 @@ _______________________________________________________________
       
 Достаточно вернуть 1 строку выписки по предоставлению кредита:
 
-GET http://{$abs_get_acc_stmt_dt_url}?iban=KZ000000000000000000&dt=2020-01-01
+GET https://{$abs_get_acc_stmt_dt_url}?iban=KZ000000000000000000&dt=2020-01-01
 
 .. list-table:: Описание полей
    :header-rows: 1
@@ -289,7 +289,7 @@ GET http://{$abs_get_acc_stmt_dt_url}?iban=KZ000000000000000000&dt=2020-01-01
 _______________________________________________________________
 
 
-GET http://{$abs_get_pdf_url}?dbz_num=KD0000000&dbz_dt=2020-01-01&iinbin=000000000000
+GET https://{$abs_get_pdf_url}?dbz_num=KD0000000&dbz_dt=2020-01-01&iinbin=000000000000
 
 
 .. list-table:: Описание полей
@@ -323,7 +323,7 @@ GET http://{$abs_get_pdf_url}?dbz_num=KD0000000&dbz_dt=2020-01-01&iinbin=0000000
 Регистрация ПТ в информационной системе банка
 _______________________________________________________________     
 
-POST http://{$abs_reg_pt_url}
+POST https://{$abs_reg_pt_url}
 
 .. code-block:: json
 
@@ -401,7 +401,7 @@ POST http://{$abs_reg_pt_url}
 Отзыв ПТ в информационной системе банка
 _______________________________________________________________     
 
-POST http://{$abs_refuse_pt_url}
+POST https://{$abs_refuse_pt_url}
 
 .. code-block:: json
 
@@ -429,7 +429,7 @@ reason_code - причина отзыва. смотрите с разделе Д
 _______________________________________________________________     
 
 
-POST http://{$abs_return_pt_url}
+POST https://{$abs_return_pt_url}
 
 .. code-block:: json
 
