@@ -18,37 +18,37 @@ POST http://{$k2host}/restapi/services/k2loan_from_eko
 
 .. code-block:: json
 
-	[
-		{
-			"iban": "KZ000000000000000000",
-			"cur": "KZT",
-			"debt": 2000000,
-			"fullname": "Тестовый Тест Тестович",
-			"contract_number": "KD0000000001",
-			"dbz_contract_number": "KD0000000001",
-			"iinbin": "000000000000",
-			"overdue_days": 90,
-			"system": "way4"		
-		}
-		,
-		{
-		
-		}
-		,
-		{
-		
-		}
-	]
+     [
+          {
+               "iban": "KZ000000000000000000",
+               "cur": "KZT",
+               "debt": 2000000,
+               "fullname": "Тестовый Тест Тестович",
+               "contract_number": "KD0000000001",
+               "dbz_contract_number": "KD0000000001",
+               "iinbin": "000000000000",
+               "overdue_days": 90,
+               "system": "way4"          
+          }
+          ,
+          {
+          
+          }
+          ,
+          {
+          
+          }
+     ]
 
 
 Ответ:
 
 .. code-block:: json
 
-	{
-		"error_text":"",
-		"error_code":0
-	}
+     {
+          "error_text":"",
+          "error_code":0
+     }
 
 
 
@@ -62,10 +62,10 @@ POST http://{$k2host}/restapi/services/k2req_status_from_eko
 
 .. code-block:: json
 
-	{
-		"reference": "PTP00000000001",
-		"status_code": "PC1"
-	}
+     {
+          "reference": "PTP00000000001",
+          "status_code": "PC1"
+     }
 
 
 .. list-table:: Описание полей
@@ -76,7 +76,7 @@ POST http://{$k2host}/restapi/services/k2req_status_from_eko
    * - reference
      - Референс платежного требования
    * - status_code
-     - Статус подтверждения	 
+     - Статус подтверждения      
 
 .. list-table:: Описание статуса
    :header-rows: 1
@@ -91,11 +91,41 @@ POST http://{$k2host}/restapi/services/k2req_status_from_eko
 Ответ:
 
 .. code-block:: json
-	
-	{
-		"error_text":"",
-		"error_code":0
-	}
+     
+     {
+          "error_text":"",
+          "error_code":0
+     }
+
+
+«error_code»:0 - успешный ответ
+
+
+Сервис приема отзыва входящего платежного требования
+_______________________________________________________________
+
+Запрос:
+
+POST http://{$k2host}/restapi/services/k2req_refuse_from_eko
+
+
+.. code-block:: json
+
+     {
+          "reference": "PTP00000000001",
+          "reason_code": "01"
+     }
+
+reason_code - причина возврата. смотрите с разделе Документы -> Причины отзывов.
+     
+Ответ:
+
+.. code-block:: json
+     
+     {
+          "error_text":"",
+          "error_code":0
+     }
 
 
 «error_code»:0 - успешный ответ
@@ -121,18 +151,18 @@ GET http://{$abs_get_cli_url}?iinbin=000000000000
 Ответ:
 
 .. code-block:: json
-	
-	{
-		"error_text":"",
-		"error_code":0,
-		"iinbin": "000000000000",
-		"fullname": "850210301899",
-		"sectecon": 9,
-		"residfl": 1
-	}
+     
+     {
+          "error_text":"",
+          "error_code":0,
+          "iinbin": "000000000000",
+          "fullname": "850210301899",
+          "sectecon": 9,
+          "residfl": 1
+     }
 
-«error_code»:0 - успешный ответ	
-	
+«error_code»:0 - успешный ответ     
+     
 Список счетов по клиенту
 _______________________________________________________________
 
@@ -150,24 +180,24 @@ GET http://{$abs_get_acc_url}?iinbin=000000000000
 Ответ:
 
 .. code-block:: json
-	
-	{
-		"error_text":"",
-		"error_code":0,
-		"ibans":
-		[		
-			{
-				"iban":"KZ000000000000000000",
-				"accountName":"Наименование счета, обычно ФИО",			
-				"ps": "2204191",
-				"system": "way4",
-				"cur": "KZT"
-			}
-		]
+     
+     {
+          "error_text":"",
+          "error_code":0,
+          "ibans":
+          [          
+               {
+                    "iban":"KZ000000000000000000",
+                    "accountName":"Наименование счета, обычно ФИО",               
+                    "ps": "2204191",
+                    "system": "way4",
+                    "cur": "KZT"
+               }
+          ]
 
-	}
-	
-«error_code»:0 - успешный ответ	
+     }
+     
+«error_code»:0 - успешный ответ     
 
 .. list-table:: Описание полей
    :header-rows: 1
@@ -187,7 +217,7 @@ GET http://{$abs_get_acc_url}?iinbin=000000000000
 
 Получить выписку по счету на Дату
 _______________________________________________________________
-	 
+      
 Достаточно вернуть 1 строку выписки по предоставлению кредита:
 
 GET http://{$abs_get_acc_stmt_dt_url}?iban=KZ000000000000000000&dt=2020-01-01
@@ -206,24 +236,24 @@ GET http://{$abs_get_acc_stmt_dt_url}?iban=KZ000000000000000000&dt=2020-01-01
 
 .. code-block:: json
 
-	{
-		"error_text": "",
-		"error_code": 0,
-		"stmt": [
-			{
-				"purpose": "Предоставление кредита по договору",
-				"amount": 900000,
-				"cur": "KZT",
-				"DC": "D",
-				"out_bal": 900000
-			}
-		]
-	}
+     {
+          "error_text": "",
+          "error_code": 0,
+          "stmt": [
+               {
+                    "purpose": "Предоставление кредита по договору",
+                    "amount": 900000,
+                    "cur": "KZT",
+                    "DC": "D",
+                    "out_bal": 900000
+               }
+          ]
+     }
 
 
 .. list-table:: Описание полей
    :header-rows: 1
-	
+     
    * - Поле
      - Описание
    * - purpose
@@ -236,8 +266,8 @@ GET http://{$abs_get_acc_stmt_dt_url}?iban=KZ000000000000000000&dt=2020-01-01
      - D -дебет, C - кредит
    * - out_bal
      - Исходящий остаток
-	
-«error_code»:0 - успешный ответ	
+     
+«error_code»:0 - успешный ответ     
 
 .. list-table:: Описание полей
    :header-rows: 1
@@ -254,7 +284,7 @@ GET http://{$abs_get_acc_stmt_dt_url}?iban=KZ000000000000000000&dt=2020-01-01
      - КОД АБС
    * - cur
      - Валюта
-	 
+      
 Получить Скан ДБЗ
 _______________________________________________________________
 
@@ -278,15 +308,146 @@ GET http://{$abs_get_pdf_url}?dbz_num=KD0000000&dbz_dt=2020-01-01&iinbin=0000000
 
 .. code-block:: text
 
-	Status 200
-	Content-Type: application/pdf
-	Content-Disposition: attachment; filename="Имяфайла.pdf"		
-	RAW данные в формате PDF,TIFF
+     Status 200
+     Content-Type: application/pdf
+     Content-Disposition: attachment; filename="Имяфайла.pdf"          
+     RAW данные в формате PDF,TIFF
 
 
 Неуспешный Ответ:
 
 .. code-block:: text
 
-	Status 404
-	
+     Status 404
+
+Регистрация ПТ в информационной системе банка
+_______________________________________________________________     
+
+POST http://{$abs_reg_pt_url}
+
+.. code-block:: json
+
+     {
+          "refer": "PTP0000000000001",
+          "accept_dt": "2021-01-05",
+          "doc_num": "16",
+          "doc_at": "2021-01-04",
+          "iinbin": "ИИН/БИН клиента",
+          "acc_fullname": "Тестовый тест тестович",
+          "ben_fullname": "АО \"KASPI BANK\"",
+          "ben_bin": "971240001315",
+          "ben_iban": "KZ12722R00000000000",
+          "ben_kbe": "14",
+          "amount": 2000000,
+          "cur": "KZT",
+          "knp": "423",
+          "dbz_num": "R0000-001",
+          "dbz_dt": "2014-02-08",
+          "purpose": "Безакцептное погашение задолженности заемщика (Тестовый тест тестович) по Договору банковского займа №R0000-001 от 08.02.2014г. ,  в соответствии со ст. 32 Закона РК №11-VI от 26.07.2016г. \"О платежах и платежных системах\".",
+          "head":"Руководителев Руководитель Руководителулы",
+          "account":"Главный Бухгалер Петрович"          
+     }
+
+.. list-table:: Описание полей
+     :header-rows: 1     
+
+     * - Поле
+       - Описание
+     * - refer
+       - Уникальный Референс ПТ
+     * - accept_dt
+       - Дата приема ПТ в формате ГГГГ.ММ.ДД
+     * - doc_num
+       - Номер документа
+     * - iinbin
+       - ИИН или БИН клиента 
+     * - acc_fullname
+       - Наименование счета
+     * - ben_fullname
+       - Получатель
+     * - ben_bin
+       - БИН получателя
+     * - ben_iban
+       - Номер счета получателя
+     * - ben_kbe
+       - КБе
+     * - amount
+       - Сумма ПТ
+     * - cur
+       - Код валюты
+     * - knp
+       - Код назначения платежа
+     * - dbz_num
+       - Номер ДБЗ
+     * - dbz_dt
+       - Дата ДБЗ в формате ГГГГ.ММ.ДД
+     * - purpose
+       - Назначение платежа
+     * - head
+       - Руководитель
+     * - account
+       - Бухгалтер
+      
+Ответ
+
+.. code-block:: json
+     
+     {
+          "error_text":"",
+          "error_code":0
+     }
+
+
+Отзыв ПТ в информационной системе банка
+_______________________________________________________________     
+
+POST http://{$abs_refuse_pt_url}
+
+.. code-block:: json
+
+     {
+          "refer": "PTP0000000000001",
+          "reason_code": "01"
+     }     
+     
+
+reason_code - причина отзыва. смотрите с разделе Документы -> Причины отзывов.
+
+
+
+Ответ
+
+.. code-block:: json
+     
+     {
+          "error_text":"",
+          "error_code":0
+     }
+     
+
+Возврат ПТ в информационной системе банка
+_______________________________________________________________     
+
+
+POST http://{$abs_return_pt_url}
+
+.. code-block:: json
+
+     {
+          "refer": "PTP0000000000001",
+          "reason_code": "99"
+     }     
+     
+
+reason_code - причина возврата. смотрите с разделе Документы -> Причины отзывов.
+
+
+
+Ответ
+
+.. code-block:: json
+     
+     {
+          "error_text":"",
+          "error_code":0
+     }
