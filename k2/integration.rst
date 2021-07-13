@@ -26,6 +26,7 @@ POST https://{$k2host}/restapi/services/k2loan_from_eko
                "fullname": "Тестовый Тест Тестович",
                "contract_number": "KD0000000001",
                "dbz_contract_number": "KD0000000001",
+			   "dbz_dt": "2014-02-08",
                "iinbin": "000000000000",
                "overdue_days": 90,
                "system": "way4"          
