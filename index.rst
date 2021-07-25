@@ -32,6 +32,7 @@
    features/index
    marketplace/index
    k2/index
+   3party/index
 
 О платформе
 ====================================
