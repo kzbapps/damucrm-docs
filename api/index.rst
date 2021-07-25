@@ -2,66 +2,66 @@
 ====================================
 
 .. toctree::
-	RateLimiter
-	RunParallel
-	BPMSStartProcess2
-	DoScriptGetTable
-	SendWSAsync
-	ClearCache
+
 	AccUndoaByPkNoOper
-	Detail
-	GetPasswordHash
-	SqlQueryRow
-	SqlQueryRow2
-	SendEmail
-	PDFBatch
-	SqlQueryRows
+	AppendFile
+	BPMSStartProcess2
+	Base64Encode
+	CSVRead
+	CheckGrantOfEntity
+	ClearCache
+	ColumnsByQuery
 	Command
 	CompareHashAndPassword
-	CSVRead
-	FileContent
-	TimeParseUnix
-	DML
-	DMLI
-	SqlCall 
-	AppendFile
-	Hostname
-	TimeParseFormat
-	HttpGet2
-	ColumnsByQuery
-	RegexpFindStringSubmatch
-	ImapProcessInBoxToMessage
-	CheckGrantOfEntity
-	SqlQueryRowsExtDb
-	UploadRawData
-	Query
-	StringToJson
-	ParseTemplate
-	LdapSearch
-	QueryEscape
-	QueryUnescape
-	HasSuffix
-	HasPrefix
-	StrContains
 	CryptoSignPKCS1v15
 	DBCurrentDateTime
-	XmltoJSONString
-	StripTags
-	Md5
-	StrReplace
-	ParseHTMLTemplate
-	SendMail2NoTLS
-	SendMail2
+	DML
+	DMLI
+	Detail
+	DoScriptGetTable
+	EncodeQRCode
+	FileContent
+	GetPasswordHash
+	HasPrefix
+	HasSuffix
+	Hostname
+	HttpGet2
+	ImapProcessInBoxToMessage
 	Join
 	JsonToString
 	JsonToStringIndent
 	JsonToXML
+	LdapSearch
+	Md5
 	MkdirAll
-	RegexpFindAllStringsAndJoin
-	Base64Encode
+	PDFBatch
 	ParseEmailAddress
-	Split
+	ParseHTMLTemplate
+	ParseTemplate
 	Plugin
-
-	
-	
+	QRCodeBase64
+	Query
+	QueryEscape
+	QueryUnescape
+	RateLimiter
+	RegexpFindAllStringsAndJoin
+	RegexpFindStringSubmatch
+	RunParallel
+	SendEmail
+	SendMail2
+	SendMail2NoTLS
+	SendWSAsync
+	Split
+	SqlCall 
+	SqlQueryRow
+	SqlQueryRow2
+	SqlQueryRows
+	SqlQueryRowsExtDb
+	StrContains
+	StrReplace
+	StringToJson
+	StripTags
+	TimeParseFormat
+	TimeParseUnix
+	UploadRawData
+	XmltoJSONString
