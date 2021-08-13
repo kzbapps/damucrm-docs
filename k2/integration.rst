@@ -20,16 +20,18 @@ POST https://{$k2host}/restapi/services/k2loan_from_eko
 
      [
           {
-               "iban": "KZ000000000000000000",
-               "cur": "KZT",
-               "debt": 2000000,
-               "fullname": "Тестовый Тест Тестович",
-               "contract_number": "KD0000000001",
-               "dbz_contract_number": "KD0000000001",
-			   "dbz_dt": "2014-02-08",
-               "iinbin": "000000000000",
-               "overdue_days": 90,
-               "system": "way4"          
+			"iban": "KZ000000000000000000",
+			"cur": "KZT",
+			"debt": 2000000,
+			"fullname": "Тестовый Тест Тестович",
+			"contract_number": "KD0000000001",
+			"dbz_contract_number": "KD0000000001",
+			"dbz_dt": "2014-02-08",
+			"dep_id": 555,
+			"id": 666,
+			"iinbin": "000000000000",
+			"overdue_days": 90,
+			"system": "way4"          
           }
           ,
           {
@@ -221,15 +223,15 @@ _______________________________________________________________
       
 Достаточно вернуть 1 строку выписки по предоставлению кредита:
 
-GET https://{$abs_get_acc_stmt_dt_url}?iban=KZ000000000000000000&dt=2020-01-01
+GET https://{$abs_get_acc_stmt_dt_url}?dep_id=555&id=666&dt=2020-01-01
 
 .. list-table:: Описание полей
    :header-rows: 1
 
    * - Поле
      - Описание
-   * - iban
-     - Номер счета
+   * - dep_id/id
+     - DEP_ID/ID договора в АБС колвир
    * - dt
      - Дата в формате ГГГГ.ММ.ДД
 
