@@ -13,7 +13,7 @@ _______________________________________________________________
 
 .. code-block:: text
 
-POST https://{$k2host}/restapi/services/k2loan_from_eko
+	POST https://{$k2host}/restapi/services/k2loan_from_eko
 
 
 .. code-block:: json
@@ -56,6 +56,48 @@ POST https://{$k2host}/restapi/services/k2loan_from_eko
 
 
 "error_code":0 - успешный ответ
+
+Сервис актуализации информации о долге
+_______________________________________________________________
+
+Запрос
+
+.. code-block:: text
+
+	POST https://{$k2host}/restapi/services/k2loan_sync_debt
+
+
+.. code-block:: json
+
+     [
+          {
+			"debt": 2000000,
+			"contract_number": "KD0000000001"
+          }
+          ,
+          {
+          
+          }
+          ,
+          {
+          
+          }
+     ]
+
+
+Ответ:
+
+.. code-block:: json
+
+     {
+          "error_text":"",
+          "error_code":0
+     }
+
+
+
+"error_code":0 - успешный ответ
+
 
 
 Сервис приема статусов входящего платежного требования
