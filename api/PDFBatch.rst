@@ -25,7 +25,7 @@ PDFBatch - обработка PDF файла
 
        output.errNum = PDFBatch ( 
 
-                                 [ [ h:\project\pdft-master\test\pdf\pdf_from_docx.pdf ] ]  ,
+                                 [[ h:\project\pdft-master\test\pdf\pdf_from_docx.pdf ]]  ,
 
                                       (
                
@@ -35,7 +35,7 @@ PDFBatch - обработка PDF файла
 
                                                 param1 = " arial" ,
 
-                                                param2 = [ [ h:\project\pdft-master\test\ttf\arial.ttf ] ] 
+                                                param2 = [[ h:\project\pdft-master\test\ttf\arial.ttf ]] 
  
                                               } , 
               
@@ -69,7 +69,7 @@ PDFBatch - обработка PDF файла
 
                                               { action = "InsertImg" , 
 
-                                                param1 = [ [ h:\projects\pdft-master\test\img\gopher.png ] ] ,
+                                                param1 = [[ h:\projects\pdft-master\test\img\gopher.png ]] ,
 
                                                 param2 = 1 ,
 
