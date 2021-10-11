@@ -153,6 +153,8 @@ POST https://{$k2host}/restapi/services/k2req_status_from_eko
      - PC1
    * - Принята в картотеку банка
      - PC3
+   * - Требование исполнено
+     - EXECUTED
  
 Ответ:
 
