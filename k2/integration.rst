@@ -13,7 +13,7 @@ _______________________________________________________________
 
 .. code-block:: text
 
-	POST https://{$k2host}/restapi/services/k2loan_from_eko
+	POST https://{$k2host}/restapi/services/run/k2loan_from_eko
 
 
 .. code-block:: json
@@ -88,29 +88,30 @@ _______________________________________________________________
 
 .. code-block:: text
 
-	POST https://{$k2host}/restapi/services/k2extreq_pay_from_eko
+	POST https://{$k2host}/restapi/services/run/k2extreq_pay_from_eko
 
 
 .. code-block:: json
 
-     [
-          {
-			"request_id": 1111,
-			"trn_id": 11111111,
-			"refer": "PTP00000000001",
-			"cur": "KZT",
-			"amount": 2000000          
-          }
-          ,
-          {
-          
-          }
-          ,
-          {
-          
-          }
-     ]
-
+	{
+		"items":
+		 [
+			  {
+				"request_id": 1111,
+				"trn_id": 11111111,
+				"refer": "PTPJ200000000037",
+				"cur": "KZT",
+				"amount": 2000000          
+			  },
+			  {
+				"request_id": 1112,
+				"trn_id": 11111112,
+				"refer": "PTPJ200000000037",
+				"cur": "KZT",
+				"amount": 3000000          
+			  }			  
+		 ]
+	}
 
 .. list-table:: Описание полей
      :header-rows: 1     
@@ -144,18 +145,13 @@ _______________________________________________________________
 .. code-block:: json
 
 	{
-		"error_code": 13,
-		"error_text": "Платеж уже принят",
+		"error_code": 1,
+		"error_text": "Обнаружены ошибки при приеме платежей",
 		"errors": [
 			{
-				"error_code": 15,
-				"error_text": "Платеж уже принят",
-				"request_id": 111
-			},
-			{
-				"error_code": 15,
-				"error_text": "Неверная длина ИИН",
-				"request_id": 1112
+				"error_code": 9,
+				"error_text": "pq: duplicate key value violates unique constraint \"k2extreq_pay_trn_id_uindex\"",
+				"request_id": 1111
 			}
 		]
 	}
@@ -169,7 +165,7 @@ _______________________________________________________________
 
 .. code-block:: text
 
-	POST https://{$k2host}/restapi/services/k2loan_sync_debt
+	POST https://{$k2host}/restapi/services/run/k2loan_sync_debt
 
 
 .. code-block:: json
@@ -208,7 +204,7 @@ _______________________________________________________________
 Сервис приема статусов входящего платежного требования
 _______________________________________________________________
 
-POST https://{$k2host}/restapi/services/k2req_status_from_eko
+POST https://{$k2host}/restapi/services/run/k2req_status_from_eko
 
 .. code-block:: json
 
@@ -258,7 +254,7 @@ _______________________________________________________________
 
 Запрос:
 
-POST https://{$k2host}/restapi/services/k2req_refuse_from_eko
+POST https://{$k2host}/restapi/services/run/k2req_refuse_from_eko
 
 
 .. code-block:: json
