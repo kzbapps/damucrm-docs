@@ -783,39 +783,61 @@ POST https://{$post_all_loan_exclude_to_eko}
 
 .. code-block:: json
 
-	[
-
-		{
-			"banks": [
-				{
-					"bank": "KINCKZKA"
-				},
-				{
-					"bank": "NURSKZKX"
-				}
-			],
-			"finish_dt": "2021-10-08",
-			"for_bank": "1",
-			"for_extreq": "1",
-			"for_iban": "1",
-			"for_refuse": "1",
-			"ibans": [
-				{
-					"iban": "KZ123"
-				},
-				{
-					"iban": "KZ456"
-				}
-			],
-			"id": "20",
-			"iin": "000000000000",
-			"is_active": "0"
-		},
-
-		{
-
-		}
-	]
+	{
+	  "items": [
+	   {
+		"bank": "KINCKZKA",
+		"finish_dt": "2021-10-16",
+		"for_bank": "1",
+		"for_extreq": "0",
+		"for_iban": "0",
+		"for_refuse": "0",
+		"id": "19",
+		"iin": "981217450830",
+		"is_active": "1"
+	   },
+	   {
+		"finish_dt": "2021-10-08",
+		"for_bank": "1",
+		"for_extreq": "1",
+		"for_iban": "1",
+		"for_refuse": "1",
+		"id": "20",
+		"iin": "000000000000",
+		"is_active": "0"
+	   },
+	   {
+		"for_bank": "0",
+		"for_extreq": "0",
+		"for_iban": "0",
+		"for_refuse": "0",
+		"id": "11",
+		"iin": "780204403060",
+		"is_active": "0"
+	   },
+	   {
+		"finish_dt": "2021-10-30",
+		"for_bank": "0",
+		"for_extreq": "0",
+		"for_iban": "1",
+		"for_refuse": "0",
+		"iban": "KZ123456789012345678",
+		"id": "9",
+		"iin": "780204403060",
+		"is_active": "0"
+	   },
+	   {
+		"finish_dt": "2021-10-08",
+		"for_bank": "0",
+		"for_extreq": "0",
+		"for_iban": "0",
+		"for_refuse": "0",
+		"id": "18",
+		"iin": "990615400064",
+		"is_active": "0"
+	   }
+	  ]
+	 }
 
 .. list-table:: Описание полей
      :header-rows: 1
@@ -825,17 +847,17 @@ POST https://{$post_all_loan_exclude_to_eko}
      * - finish_dt
        - Действие запрета в формате YYYY-MM-DD
      * - for_bank
-       - Запрет действует для банков в полях banks, если for_bank = "1"
+       - Запрет действует для банка в поле bank, если for_bank = "1"
      * - for_extreq
        - Запрет выставления исходящих ПТ
      * - for_iban
-       - Запрет действует для определенных счетов в полях ibans, если for_iban = "1"
+       - Запрет действует счета в поле iban, если for_iban = "1"
      * - for_refuse
        - Запрет отзывов ПТ
-     * - ibans
-       - Список исключаемых счетов
-     * - banks
-       - Список исключаемых банков
+     * - iban
+       - IBAN исключаемого счета
+     * - bank
+       - БИК исключаемого банка
      * - id
        - Уникальный номер запрета
      * - iin
