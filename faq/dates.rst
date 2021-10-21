@@ -36,6 +36,15 @@
 	 select TO_DATE('2021-03-06 00:00:00','YYYY-MM-dd HH24:MI:SS') 
 	>2021-03-06	
 	
+Добавить дни, часы, минуты к текущей дате
+
+.. code-block:: sql
+
+	update table1 set due_date =    
+    NOW() + make_interval(days=> coalesce(t2.timer_day,0)::int) 
+     + make_interval(hours=> coalesce(t2.timer_hour,0)::int )
+     + make_interval(mins => coalesce(t2.timer_min,0)::int )	
+	from table2 t2
 	
 Для вывода строчной даты на русском в postgresql в шаблоне экспорта ,  например, 10 февраля 1985
 
