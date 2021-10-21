@@ -35,7 +35,30 @@
 	
 	 select TO_DATE('2021-03-06 00:00:00','YYYY-MM-dd HH24:MI:SS') 
 	>2021-03-06	
+	
+	
+Для вывода строчной даты на русском в postgresql в шаблоне экспорта ,  например, 10 февраля 1985
 
+Перед вызовом нужно установить lc_time
+
+.. code-block:: lua
+
+	if os.getenv("CRM_DB_TYPE")=="pgsql" then
+		SqlExec2([[set lc_time to 'ru_RU.utf8']])
+	end
+	
+Формула в поле created_at_fmt:
+
+.. code-block:: sql
+
+	replace( TO_CHAR(main.created_at,'DD  TMmonth YYYY'), 'ь','я')
+	
+В шаблоне {{(index $item_value.k2extreq_refuse_reg 0 ).created_at_fmt}} г.:
+
+.. code-block:: sql
+
+	replace( TO_CHAR(main.created_at,'DD  TMmonth YYYY'), 'ь','я')
+	
 Преобразование в AngularJS
 
 .. code-block:: html
