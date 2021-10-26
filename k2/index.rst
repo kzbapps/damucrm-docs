@@ -7,4 +7,6 @@
    systems
    checks
    integration
+   integration_kafka
+
    
