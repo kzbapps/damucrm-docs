@@ -1,27 +1,31 @@
-Возможности DamuCRM
+Возможности DamuBPM
 ===================================================
 
+
+DamuBPM - это BPMS платформа с Low code языком программирования позволяющая наименьшими ресурсами и минимумом привлекая разработчиков,
+
+автоматизировать процессы компании. 
+
+Применяя нашу систему наши клиенты уже сэкономили тысячи человеко-часов благодаря автоматизации рутинных операций. 
+
+Их сотрудники больше не вязнут в документах, а эффективно контролируют и управляют процессами.
+
+
 .. toctree::
-   entities
+   arc
+
+BPM - платформа
+---------------------------------------------------
+.. toctree:: 
    bpms
-   restapi
-   soap
-   report
-   report-cron-email
-   report-to-excel
-   login-log
-   params
-   domains
-   modules
-   data-types
-   cicd
-   crontab
-   dirs
-   files
-   file-types
-   exp-templates
-   file-type-groups
-   template-funcs
+
+
+Экранные формы, пользовательский интерфейс
+---------------------------------------------------   
+
+.. toctree:: 
+
+   form-builder   
    menu
    langs
    translates
@@ -29,29 +33,76 @@
    page-tpls
    cms
    widgets
-   ui-block-tpl
-   queries
-   details
-   extdbs
-   filter-funcs
-   value-backups
+   ui-block-tpl   
+   dashboards   
+
+Интеграции
+---------------------------------------------------   
+
+.. toctree:: 
+   restapi
+   soap
+
+Доступ и безопасность
+---------------------------------------------------
+
+.. toctree::   
+   login-log
+   roles
+   grants
+   audit
    users
    ldaps
    auth-tokens
    auth-profiles
    password-policy
-   luas
-   calendar
+   locked-rows
+
+Базы данных, аналитика
+---------------------------------------------------
+
+.. toctree::   
+
+   entities
+   queries
+   details
+   extdbs
+   filter-funcs
+   value-backups   
+   report
+   report-cron-email
+   report-to-excel   
    sla
-   18n
-   form-builder
-   edskz
    global-msg
-   roles
-   grants
-   dashboards
-   audit
+
    approve
    import
    export
    dav
+
+Общие функции
+---------------------------------------------------
+
+.. toctree::
+
+   crontab
+   edskz
+   18n   
+   calendar
+   params
+   domains
+   modules
+   data-types
+   cicd
+   luas   
+
+Работа с файлами
+---------------------------------------------------
+
+.. toctree::   
+   dirs
+   files
+   file-types
+   exp-templates
+   file-type-groups
+   template-funcs   

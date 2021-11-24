@@ -1,10 +1,17 @@
-.. DamuCRM documentation master file, created by
+.. DamuBPM documentation master file, created by
    sphinx-quickstart on Sun Feb  7 15:23:05 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Добро пожаловать в документацию DamuCRM!
+.. image:: images/damu-bpm-logo.png
+  :width: 200
+  :alt: DAMUBPM
+
+Добро пожаловать в документацию DamuBPM!
 ======================================================================
+
+
+
 
 .. toctree::
    :maxdepth: 2
@@ -26,10 +33,10 @@
    :maxdepth: 1
    :glob:
 
+   features/index
    install/index
    faq/index
    api/index
-   features/index
    marketplace/index
    k2/index
    3party/index
@@ -37,7 +44,17 @@
 О платформе
 ====================================
 
-Платформа DamuCRM, разработана компанией B-APPS в 2017 году. 
+
+
+DamuBPM - это BPMS платформа с Low code языком программирования позволяющая наименьшими ресурсами и минимумом привлекая разработчиков,
+
+автоматизировать процессы компании.
+
+Применяя нашу систему наши клиенты уже сэкономили тысячи человеко-часов благодаря автоматизации рутинных операций.
+
+Их сотрудники больше не вязнут в документах, а эффективно контролируют и управляют процессами.
+
+Платформа DamuBPM, разработана компанией B-APPS в 2017 году.
 
 Основные задачи платформы:
 --------------------------------
@@ -54,4 +71,4 @@
    dev/reqdev
    dev/index
 
-	
+

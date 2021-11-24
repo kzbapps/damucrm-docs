@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'DamuCRM'
+project = 'DamuBPM'
 copyright = '2021, B-Apps LLP'
 author = 'B-Apps LLP'
 
