@@ -45,3 +45,48 @@ ____________________________________
 
 	fs_cli
 	> load mod_shout
+
+
+PostgreSQL Support
+____________________________________
+
+.. code-block:: text
+
+
+	apt install libpq-dev -y
+	./configure --enable-core-pgsql-support -C
+	make
+	make install
+
+Additional
+____________________________________
+
+.. code-block:: text
+
+	apt install libavformat-dev -y
+	apt install libswscale-dev -y
+	apt install libv8-dev -y
+	apt install libpq-dev -y
+	apt install bison -y
+	apt install libshout3-dev -y
+	apt install libmpg123-dev -y
+	apt install libmp3lame-dev -y
+
+Error: *** You must install libmpg123-dev to build mod_shout. Stop
+____________________________________________________________________________________________________________
+
+
+найдем libmpg123.pc :
+
+.. code-block:: text
+
+	# find /usr/*  -name 'libmpg123.pc'
+	/usr/lib64/pkgconfig/libmpg123.pc
+	/usr/local/lib/pkgconfig/libmpg123.pc
+
+выполним export PKG_CONFIG_PATH= указав директории в которых нашлись libmpg123.pc
+
+.. code-block:: text
+	export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/lib64/pkgconfig
+	
+	
