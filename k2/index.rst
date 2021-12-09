@@ -8,5 +8,4 @@
    checks
    integration
    integration_kafka
-
-   
+   debug
