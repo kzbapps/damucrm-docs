@@ -37,6 +37,7 @@
    install/index
    faq/index
    api/index
+   restapi/index
    marketplace/index
    k2/index
    3party/index
