@@ -1,20 +1,23 @@
 FAQ
 ============
 
+Angular
+----------------
+
 .. toctree::
    :maxdepth: 1
    
-   regexp
-   xml
-   json
    angular_detail
    angular_query
    angular_params
    angular_start_bp
-   bpm_lua_progress
-   angularjs_modal
-   angularjs_modal_show
-   dates
+
+AngularJS
+----------------
+
+.. toctree::
+   :maxdepth: 1
+   
    angularjs_start_bp
    angularjs_phone
    bootstrap_angularjs_buttongroup
@@ -23,27 +26,40 @@ FAQ
    bpm_angularjs_opentasks
    angularjs_update
    angularjs_draganddrop
+   angularjs_modal
+   angularjs_modal_show   
+   
+Lua
+----------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   regexp
+   xml
+   json
+   bpm_lua_progress
+   dates
+   sso
+   email
+   backups
+   multidb
+   restore_manual_processes
+   restore
+   restservices_redirect
    lua_delbom
    file_thumb
-   sub_json_lua
-   restservices_redirect
-   ui_select_limit_param   
-   email
-   restore
+   sub_json_lua   
+   ui_select_limit_param      
    page_as_view
-   approve
-   backups
-   constraints
-   sso
+   approve   
+   constraints   
    breadcrumbs
-   1s_zup_get_status
-   restore_manual_processes.rst
+   1s_zup_get_status   
    params_for_page_angularjs   
-   sql_for_widget_angularjs
-   multidb
+   sql_for_widget_angularjs   
    smart_search
    eds
    its_restapi
    error_constraints
    diff_processes
-   
