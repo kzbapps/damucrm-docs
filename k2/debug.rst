@@ -84,4 +84,32 @@
 .. image:: img/k2loan_del_extreq.png
   :width: 100%
   :alt: Ошибка
-  
+
+
+.. _k2loan_set_batchcode:
+
+Массово установить батчкод по всем кредитам
+------------------------------------------------------------------
+
+Настройка -> Rest Сервисы
+
+Создать +
+
+Код, например, k2_set_batchcode
+
+Наименование, например, k2_set_batchcode
+
+Модуль: k2
+
+Скрипт:
+
+.. code-block:: lua
+
+	output={}
+	output.errText,output.errNum = SqlExec2("update k2loan set batchcode=123")
+
+Сохранить
+
+Нажать кнопку тест и посмотреть результат в поле: Тестовые выходные данные
+
+errText="" и errNum = 0 означает, что все ок
