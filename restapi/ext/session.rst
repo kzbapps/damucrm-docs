@@ -1,8 +1,13 @@
 session - получение информации по сессии пользователя
 =============================================================================
 
+Запрос:
+
 GET /restapi/services/run/session
+
 Authorization: Bearer <token>
+
+Ответ:
 
 .. code-block:: json
 
