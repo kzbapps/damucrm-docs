@@ -59,3 +59,4 @@ Debian/Ubuntu:
 	output.ers1,output.ern1=crypto.LoadCertificateFromFile('/opt/certs/test/t/root_rsa.cer',0x00000201)
 	output.ers2,output.ern2=crypto.LoadCertificateFromFile('/opt/certs/test/t/nca_rsa.cer',0x00000202)
 	output.ersv,output.ernv=crypto.VerifyXml(xml or '')
+	

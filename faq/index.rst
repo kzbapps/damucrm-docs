@@ -58,8 +58,17 @@ Lua
    1s_zup_get_status   
    params_for_page_angularjs   
    sql_for_widget_angularjs   
-   smart_search
-   eds
+   smart_search   
    its_restapi
    error_constraints
    diff_processes
+   
+ЭЦП
+----------------
+
+.. toctree::
+   :maxdepth: 1   
+
+   eds
+   smartbridge
+
