@@ -9,6 +9,7 @@ Angular
    
    angular_restapi
    angular_query
+   angular_query_multi
    angular_params
    angular_start_bp
    angular_detail
