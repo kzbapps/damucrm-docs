@@ -7,10 +7,11 @@ Angular
 .. toctree::
    :maxdepth: 1
    
-   angular_detail
+   angular_restapi
    angular_query
    angular_params
    angular_start_bp
+   angular_detail
 
 AngularJS
 ----------------
