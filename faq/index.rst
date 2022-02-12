@@ -12,6 +12,7 @@ Angular
    angular_params
    angular_start_bp
    angular_detail
+   angular_mobile
 
 AngularJS
 ----------------
