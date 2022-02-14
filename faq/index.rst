@@ -12,6 +12,7 @@ Angular
    angular_query_multi
    angular_params
    angular_start_bp
+   angular_hide_bp_usertask
    angular_detail
    angular_mobile
 
