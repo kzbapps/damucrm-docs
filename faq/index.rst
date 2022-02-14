@@ -66,6 +66,14 @@ Lua
    error_constraints
    diff_processes
    
+Пароли  
+-----------
+
+.. toctree::
+   :maxdepth: 1
+
+   reset_password_pgsql
+
 ЭЦП
 ----------------
 
