@@ -12,6 +12,12 @@
 	
 	return class GenClass extends vm.constructor {
 	
+	step = 0;
+	
+    setStep(step){
+        this.step = step
+    }	
+	
     registerCallBack(data){        
 
         if (data.output && data.output.last_error == ""){
