@@ -7,6 +7,7 @@
 .. toctree::
 
 	int/login
+	int/setLanguage
 
 
 внешние RestAPI
