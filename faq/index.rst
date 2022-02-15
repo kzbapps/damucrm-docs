@@ -83,4 +83,5 @@ Lua
 
    eds
    smartbridge
+   shep_sign
 
