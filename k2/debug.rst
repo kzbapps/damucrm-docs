@@ -140,7 +140,7 @@ errText="" и errNum = 0 означает, что все ок
 
 		and not exists (select 1 from i$k2extaccreqdtl_send_dbz_alfa1_ i3 where i3.id = i2.id and i3.debug like '%DBZ saved%')
 		]])
-	--vvars ,instanceId,taskId,errText,errNum = BPMSStartProcess(process_code,19,input_vars)
+	
 	for k,v in pairs (arr) do
 		vvars ,instanceId,taskId,errText,errNum = BPMSStartProcess("k2extaccreqdtl_send_dbz",19,{id = v.id})
 		Commit()
