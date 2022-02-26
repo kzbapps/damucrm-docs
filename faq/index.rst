@@ -46,10 +46,8 @@ Lua
    dates
    sso
    email
-   backups
    multidb
-   restore_manual_processes
-   restore
+   restore_manual_processes   
    restservices_redirect
    lua_delbom
    file_thumb
@@ -85,3 +83,12 @@ Lua
    smartbridge
    shep_sign
 
+Базы данных
+----------------
+
+.. toctree::
+   :maxdepth: 1 
+
+   restore
+   restore_stage
+   backups   
