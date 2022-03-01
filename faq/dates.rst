@@ -5,6 +5,14 @@
 .. code-block:: lua
 
 	currentDate =TimeParseFormat( DBCurrentDateTime(),"2006-01-02 15:04:05","060102")
+	
+Функция TimeParseUnix
+
+Время в timestamp-millis с временем с учетом часового пояса
+
+.. code-block:: lua
+	
+	local ts = TimeParseUnix(DBCurrentDateTime().." +06:00","2006-01-02 15:04:05 -07:00")*1000	
 
 Дата по умолчанию в AngularJS шаблоне
 
