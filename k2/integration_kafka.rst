@@ -57,19 +57,31 @@ _______________________________________________________________
 .. list-table:: Значение статусов
      :header-rows: 1
 
-     * - Статус
-       - Описание на русском
+     * - Status name eng
+       - Status name ru
      * - request was sent
        - запрос отправлен
+     * - payment order accepted
+       - ПТ принято банком
+     * - payment order not accepted
+       - ПТ не принято
+     * - reversal of payment order was not accepted
+       - Отзыв ПТ не принят
+     * - reversal of payment order was not accepted (was reversed before)
+       - Отзыв ПТ не принят, ПТ возвращено  
+     * - reversal of payment order was not accepted (was executed before)
+       - Отзыв ПТ не принят, ПТ исполнено
      * - request confirmed
        - запрос подтвержден
      * - payment order activated
        - ПТ активировано
      * - payment order executed
        - ПТ исполнено
-     * - payment order was reversed
-       - ПТ возвращено
-     * - payment order de activated
+     * - payment order reversed
        - ПТ отозвано
+     * - payment order not accepted
+       - ПТ не принято
+     * - Payment order executed
+       - ПТ исполнено
 
 
