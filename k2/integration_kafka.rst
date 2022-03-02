@@ -79,8 +79,6 @@ _______________________________________________________________
        - ПТ исполнено
      * - payment order reversed
        - ПТ отозвано
-     * - payment order not accepted
-       - ПТ не принято
      * - Payment order executed
        - ПТ исполнено
 
