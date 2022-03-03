@@ -541,7 +541,7 @@ ________________________________________________________________________________
 
 .. code-block:: text
 
-	POST https://{$k2host}/restapi/services/run/_k2loan_exclude_on_by_iin_dbznum
+	POST https://{$k2host}/restapi/services/run/k2loan_exclude_on_by_iin_dbznum
 	
 .. code-block:: json
 
