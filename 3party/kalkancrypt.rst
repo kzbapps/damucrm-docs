@@ -12,7 +12,9 @@ __________________________________________________________________________
 	ERROR 0x8f00009: Load key store - invalid password.
 
 
-Решение: библиотеки kalkancrypt должны всегда лежать в папке /opt/kalkancrypt (никаких /opt/damu/kalkancrypt)
+1. Решение: библиотеки kalkancrypt должны всегда лежать в папке /opt/kalkancrypt (никаких /opt/damu/kalkancrypt)
+
+2. Вам передали не тот pfx файл, например из полученных 1.pfx, 2.pfx и 3.pfx из ПО Vido, подошел только 2.pfx
 
 
 Ошибка: [signal SIGSEGV: segmentation violation code=0x1 addr=0x18 pc=0x134f58c]
