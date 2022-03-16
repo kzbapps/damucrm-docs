@@ -63,22 +63,15 @@ _______________________________________________________________
        - запрос отправлен
      * - payment order accepted
        - ПТ принято банком
-     * - payment order not accepted
-       - ПТ не принято
-     * - reversal of payment order was not accepted
-       - Отзыв ПТ не принят
-     * - reversal of payment order was not accepted (was reversed before)
-       - Отзыв ПТ не принят, ПТ возвращено  
-     * - reversal of payment order was not accepted (was executed before)
-       - Отзыв ПТ не принят, ПТ исполнено
-     * - request confirmed
-       - запрос подтвержден
      * - payment order activated
        - ПТ активировано
-     * - payment order executed
-       - ПТ исполнено
+     * - payment order not accepted
+       - ПТ не принято
+     * - not reversed (payment order non-exist)
+       - Отзыв ПТ не принят, отзываемый документ
+     * - reversal of payment order was not accepted (PO already deactivated)
+       - Отзыв ПТ не принят, ПТ возвращено либо ПТ исполнено
      * - payment order reversed
        - ПТ отозвано
-
-
-
+     * - Payment order executed
+       - ПТ исполнено

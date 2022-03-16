@@ -89,6 +89,7 @@ Lua
 .. toctree::
    :maxdepth: 1 
 
+   query_params
    restore
    restore_stage
-   backups   
+   backups
