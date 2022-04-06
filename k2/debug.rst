@@ -163,7 +163,7 @@ errText="" и errNum = 0 означает, что все ок
 
 Выполните SQL в базе:
 
-.. code-block:: lua
+.. code-block:: sql
 
 	update k2mtfile set stat_id = (select id from k2mtfile_stat where code='readytosend')
 	where stat_id= (select id from k2mtfile_stat where code='sent7z')
