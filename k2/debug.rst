@@ -148,7 +148,27 @@ errText="" и errNum = 0 означает, что все ок
 
 4. Сохраняем рест сервис, Запускаем через кнопку тест.
 
+.. _k2mtfile_resend:
 
+Переотправить МТ-файлы в Фасти в связи Изменением адреса или другой причины
+-----------------------------------------------------------------------------------------------------
 
+Условие:
+
+1. Период: 1-5 апреля 2022 года
+
+2. Папка: OTBASY_OUT
+
+3. Статус: sent7z
+
+Выполните SQL в базе:
+
+.. code-block:: lua
+
+	update k2mtfile set stat_id = (select id from k2mtfile_stat where code='readytosend')
+	where stat_id= (select id from k2mtfile_stat where code='sent7z')
+	and dir_id = (select id from k2dir where code='OTBASY_OUT')
+	and io='O'
+	and created_at  between '2022-04-01' and '2022-04-05 23:59:00'
 
 
