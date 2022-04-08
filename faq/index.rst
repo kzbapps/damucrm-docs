@@ -95,3 +95,4 @@ Lua
    restore
    restore_stage
    backups
+   pg_ssl
