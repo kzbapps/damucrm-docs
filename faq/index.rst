@@ -17,6 +17,7 @@ Angular
    angular_detail
    angular_mobile
    angular_modal
+   angular_modal_ui_block_cus
 
 AngularJS
 ----------------
