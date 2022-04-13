@@ -16,6 +16,7 @@ Angular
    angular_hide_bp_usertask
    angular_detail
    angular_mobile
+   angular_modal
 
 AngularJS
 ----------------
