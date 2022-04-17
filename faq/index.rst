@@ -18,6 +18,8 @@ Angular
    angular_mobile
    angular_modal
    angular_modal_ui_block_cus
+   angular_edit_tp_in_usertask
+
 
 AngularJS
 ----------------

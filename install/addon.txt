@@ -1,0 +1,9 @@
+yum install nginx
+yum localinstall pdftk-2.02-2.el7.x86_64.rpm
+yum install libreoffice
+yum install cairo
+yum install libSM
+yum install p7zip
+yum install pcsc-lite libtool-ltdl
+
+  
