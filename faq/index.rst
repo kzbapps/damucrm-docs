@@ -100,3 +100,4 @@ Lua
    restore_stage
    backups
    pg_ssl
+   translate
