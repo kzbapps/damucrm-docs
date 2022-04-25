@@ -20,6 +20,7 @@ Angular
    angular_modal_ui_block_cus
    angular_edit_tp_in_usertask
    angular_set_info_by_attr
+   angular_set_value_by_code
 
 AngularJS
 ----------------
