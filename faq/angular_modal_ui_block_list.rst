@@ -17,6 +17,10 @@
 
 	openModal_regulations(){
 		// код списочной страницы
+		
+		//новая глобальная переменная в Детали для модального окна - modal_page_header - тайтл модального окна
+		this.modal_page_header = 'тайтл модального окна';
+
 		this.modal_page_code = 'its_r_tech_reg';
 		// данные в data для jit-page (не обязательно к заполнению)
 		this.modal_page_data = {
