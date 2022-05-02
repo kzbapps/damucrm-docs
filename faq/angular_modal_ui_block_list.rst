@@ -45,13 +45,8 @@
 				   name : info.title,
 				});
 			}
-		}
-		
-		// нажатие на ОК
-		this.setPageDataToTablePart = _ => {
-			this.opened_modal = true;
-		}; 
-		
+		}		
+	
 		// открытие модалки
 		this.opened_modal = true;
 	}
