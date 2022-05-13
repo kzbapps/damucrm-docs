@@ -64,6 +64,14 @@
 		SqlExec2([[set lc_time to 'ru_RU.utf8']])
 	end
 	
+Обработать дату в формате 2022-05-11T18:00:00.000Z, добавить часовой пояс, чтобы получилось 2022-05-12
+
+.. code-block:: lua
+
+	local dbformat = TimeParseFormat("2022-05-11T18:00:00.000Z","2006-01-02T15:04:05.000Z","2006-01-02 15:04:05")
+	local found,errText,errNum = SqlQueryRow2([[select TO_CHAR(?::timestamp + interval '6' hour,'YYYY.MM.DD') date]],dbformat)
+
+
 Формула в поле created_at_fmt:
 
 .. code-block:: sql

@@ -5,6 +5,8 @@ KB по сторонним решениям
    freeswitch
    kalkancrypt
    smartbridge
+   ssl_pki_gov_kz
    postgresql
    mariadb
+
 
