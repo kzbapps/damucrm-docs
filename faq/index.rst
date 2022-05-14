@@ -22,6 +22,7 @@ Angular
    angular_edit_tp_in_usertask
    angular_set_info_by_attr
    angular_set_value_by_code
+   angular_confirm_dialog
 
 AngularJS
 ----------------
@@ -103,3 +104,11 @@ Lua
    backups
    pg_ssl
    translate
+
+Поиск и решение неисправностей
+----------------
+
+.. toctree::
+   :maxdepth: 1 
+
+   error_codes
