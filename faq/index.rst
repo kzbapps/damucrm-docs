@@ -94,7 +94,7 @@ Lua
    shep_sign
 
 Базы данных
-----------------
+------------------------
 
 .. toctree::
    :maxdepth: 1 
@@ -104,10 +104,12 @@ Lua
    restore_stage
    backups
    pg_ssl
+   pg_queries_date_param
    translate
+   
 
 Поиск и решение неисправностей
-----------------
+------------------------------------
 
 .. toctree::
    :maxdepth: 1 
