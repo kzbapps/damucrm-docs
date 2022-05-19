@@ -9,3 +9,5 @@
    integration
    integration_kafka
    debug
+   clean
+
