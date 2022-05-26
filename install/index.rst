@@ -10,6 +10,7 @@
    
    rhel7_k2_db
    rhel7_k2
+   docker
    
    
    
