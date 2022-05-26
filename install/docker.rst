@@ -1,7 +1,20 @@
 Установка Приложения DamuBPM через docker
 ================================================================================================================================================
 
-1. Создать файл docker-compose.yaml с содержимым:
+1. Установите базу данных локально и восстановите локальный дамп:
+
+.. code-block:: bash
+
+	psql
+	postgres=#create user demo_test with password 'demo_test';
+	postgres=#create database demo_test owner demo_test;
+	postgres=#exit;
+	psql -D demo_test
+	postgres=#create extension if not exists "uuid-ossp";
+	postgres=#exit;
+	pg_restore.exe -U demo_test --verbose --host=localhost --port=5432 --format=t --dbname=demo_test dump-demo.sql
+
+2. Создать файл docker-compose.yaml с содержимым:
 
 .. code-block:: text
 
@@ -28,13 +41,8 @@
 		  - OPENSHIFT_APP_NAME=damucrm
 		  - LD_LIBRARY_PATH=:/opt/kalkancrypt/:/opt/kalkancrypt/lib/engines
 
-
-
-2. запустить в этой же папке, где файл docker-compose.yaml
+3. запустить в этой же папке, где файл docker-compose.yaml
 
 .. code-block:: text	
 
 	docker-compose up
-
-	
-
