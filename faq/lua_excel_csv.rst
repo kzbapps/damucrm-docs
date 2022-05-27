@@ -24,6 +24,7 @@
 	for k,v in pairs(rqFields) do
 		if maps[v]==nil then
 			var.last_error="Поле ".. v .."не задано"
+			return
 		end    
 	end    
 
