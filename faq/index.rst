@@ -24,6 +24,7 @@ Angular
    angular_set_value_by_code
    angular_confirm_dialog
    angular_session_values
+   angular_endevent_redirect
 
 AngularJS
 ----------------
