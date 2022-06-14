@@ -1,8 +1,9 @@
 SmartBridge
 ===================================================================================
 
+Установите минимум strongswan-5.9.6 из исходных кодов.
 
-/etc/ipsec.conf
+/usr/local/etc/ipsec.conf
 _____________________________________
 
 
@@ -11,40 +12,59 @@ XX.XX.XX.XX - ваш белый IP
 .. code-block:: text
 
 	config setup
-		charondebug="all"
-		uniqueids=no
+			# strictcrlpolicy=yes
+			# uniqueids = no
 
-	conn %default
-		ikelifetime=1440m
-		keylife=60m
-		rekeymargin=3m
-		keyingtries=1
-		keyexchange=ikev2
-		authby=secret
+	# Add connections here.
 
-	conn sb
-		type=tunnel
-		auto=start
-		keyexchange=ikev2
-		authby=secret
-		left=%defaultroute
-		leftid=XX.XX.XX.XX
-		leftsubnet=XX.XX.XX.XX/32
-		right=195.12.122.44
-		rightsubnet=195.12.113.7/32
+	# Sample VPN connections
 
-		ike=aes256-sha256-modp1536
-		esp=aes256-sha256
+	#conn sample-self-signed
+	#      leftsubnet=10.1.0.0/16
+	#      leftcert=selfCert.der
+	#      leftsendcert=never
+	#      right=192.168.0.2
+	#      rightsubnet=10.2.0.0/16
+	#      rightcert=peerCert.der
+	#      auto=start
 
-		keyingtries=0
-		ikelifetime=1h
-		lifetime=8h
-		dpddelay=30
-		dpdtimeout=120
-		dpdaction=restart
-		auto=start
+	#conn sample-with-ca-cert
+	#      leftsubnet=10.1.0.0/16
+	#      leftcert=myCert.pem
+	#      right=192.168.0.2
+	#      rightsubnet=10.2.0.0/16
+	#      rightid="C=CH, O=Linux strongSwan CN=peer name"
+	#      auto=start
 
-/etc/ipsec.secrets
+
+	conn NIT1
+			type=tunnel
+			auto=start
+			keyexchange=ikev2
+			authby=secret
+			left=XX.XX.XX.XX
+			leftid=XX.XX.XX.XX
+			right=195.12.122.44
+			rightsubnet=195.12.113.29/32
+			ike=aes256-sha256-modp2048
+			esp=aes256-sha256-modp2048
+			aggressive=no
+			keyingtries=1
+			ikelifetime=86400s
+			lifetime=28800s
+			dpdaction=restart
+
+	conn NIT2
+			also=NIT1
+			rightsubnet=195.12.113.79/32
+
+	conn NIT_TEST
+			also=NIT1
+			rightsubnet=195.12.113.7/32
+
+	
+
+/usr/local/etc/ipsec.secrets
 _____________________________________
 
 .. code-block:: text
@@ -52,12 +72,19 @@ _____________________________________
 	XX.XX.XX.XX 195.12.122.44 : PSK ******************
 	
 
+Перезапуск:
+_____________________________________
+
+.. code-block:: text
+
+	systemctl restart ipsec
+	
 Переподключение:
 _____________________________________
 
 .. code-block:: text
 
-	ipsec up sb
+	ipsec up NIT1
 
 Тест соединения:
 _____________________________________
@@ -65,3 +92,5 @@ _____________________________________
 .. code-block:: text
 
 	ping 195.12.113.7
+	ping 195.12.113.29
+	ping 195.12.113.79
