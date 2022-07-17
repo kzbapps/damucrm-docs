@@ -25,6 +25,7 @@ Angular
    angular_confirm_dialog
    angular_session_values
    angular_endevent_redirect
+   angular_table_part_if
 
 AngularJS
 ----------------
