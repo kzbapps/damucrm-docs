@@ -8,5 +8,6 @@ KB по сторонним решениям
    ssl_pki_gov_kz
    postgresql
    mariadb
+   libreoffice
 
 
