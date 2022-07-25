@@ -28,3 +28,12 @@ Iterate
   9
   10
 
+
+print
+---------------------------------------------
+
+Конкатинация строк
+
+.. code-block:: text 
+
+	{{lua "signXml" .param.gost_path .param.gost_password ( print "AAA" "BBBB" ) }}
