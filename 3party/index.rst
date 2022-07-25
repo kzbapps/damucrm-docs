@@ -9,5 +9,5 @@ KB по сторонним решениям
    postgresql
    mariadb
    libreoffice
-
+   minio
 
