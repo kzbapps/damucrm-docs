@@ -49,15 +49,23 @@
   :width: 100%
   :alt: Ошибка
 
-можно переотправить запустив Rest Service k2mtfiles_process_restart_error
-
-
-
 либо запустить SQL в базе данных:
 
 .. code-block:: sql
 
-	update k2mtfile set stat_id=3003 where stat_id in (3004,21) and io ='O'
+	update k2mtfile set stat_id = (select id from k2mtfile_stat where code='readytosend') where stat_id in (select id from k2mtfile_stat where code in ('error','sending')) and io='O';
+
+На будущее создайте В планировщике заданий скрипт с кодом k2mtfiles_process_restart_error и интервалом каждые 10 минут:  
+
+.. code-block:: text
+
+	0 */10 * * * *
+
+.. code-block:: lua
+
+	SqlExec2([[update k2mtfile set stat_id = (select id from k2mtfile_stat where code='readytosend') where stat_id in (select id from k2mtfile_stat where code in ('error','sending')) and io='O';]])
+	
+
 
 Причины ошибочных отправок файлов:
 
