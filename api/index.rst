@@ -65,10 +65,17 @@
 	TimeParseUnix
 	UploadRawData
 	XmltoJSONString
-	
+
+Template Functions
+====================================
+.. toctree::
+
+	TemplateFuncs
+
 Пакеты Lua API
 ====================================
 
 .. toctree::
 
 	pkg/strings
+
