@@ -111,6 +111,7 @@ Lua
    pg_queries_date_param
    translate
    unlink_attr
+   random_company
    
 
 Поиск и решение неисправностей
