@@ -96,6 +96,7 @@ Lua
    eds
    smartbridge
    shep_sign
+   eds_dscr
 
 Базы данных
 ------------------------
@@ -121,3 +122,6 @@ Lua
    :maxdepth: 1 
 
    error_codes
+
+
+Мардир
