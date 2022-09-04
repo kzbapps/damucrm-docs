@@ -1,6 +1,13 @@
 Freeswitch
 ===================================================================================
 
+Настройка маршрута Казахтелеком
+_____________________________________
+
+.. image:: img/kazakhtelecom.jpg
+  :width: 400
+  :alt: Alternative text
+
 Tele2 outbound route
 _____________________________________
 
@@ -71,10 +78,9 @@ ____________________________________
 	apt install libshout3-dev -y
 	apt install libmpg123-dev -y
 	apt install libmp3lame-dev -y
-
-Error: *** You must install libmpg123-dev to build mod_shout. Stop
+	
+Error: * * * You must install libmpg123-dev to build mod_shout. Stop
 ____________________________________________________________________________________________________________
-
 
 найдем libmpg123.pc :
 
@@ -87,6 +93,5 @@ ________________________________________________________________________________
 выполним export PKG_CONFIG_PATH= указав директории в которых нашлись libmpg123.pc
 
 .. code-block:: text
+
 	export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/lib64/pkgconfig
-	
-	

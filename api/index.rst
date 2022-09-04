@@ -78,4 +78,5 @@ Template Functions
 .. toctree::
 
 	pkg/strings
+	pkg/strconv
 
