@@ -54,6 +54,8 @@
 .. code-block:: sql
 
 	update k2mtfile set stat_id = (select id from k2mtfile_stat where code='readytosend') where stat_id in (select id from k2mtfile_stat where code in ('error','sending')) and io='O';
+	update k2mtfile set stat_id = (select id from k2mtfile_stat where code='readytoimport') where stat_id in (select id from k2mtfile_stat where code in ('error')) and io='I';
+	
 
 На будущее создайте В планировщике заданий скрипт с кодом k2mtfiles_process_restart_error и интервалом каждые 10 минут:  
 
