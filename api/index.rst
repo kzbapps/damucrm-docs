@@ -80,4 +80,5 @@ Template Functions
 	pkg/strings
 	pkg/strconv
 	pkg/fmt
+	pkg/http
 
